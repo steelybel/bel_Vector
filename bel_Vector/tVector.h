@@ -20,6 +20,8 @@ public:
 
 	tVector& operator=(const tVector &vec);   // copies the contents of the provided vector into this vector
 
+	T& operator[] (size_t index); // returns the object at the given index
+
 	T *data();
 
 	void reserve(size_t newCapacity);
@@ -56,20 +58,25 @@ inline tVector<T>::~tVector()
 template<typename T>
 inline tVector<T>::tVector(const tVector & vec)
 {
-	T * newArr = new T[vec.capacity()];
-	for (int i = 0; i < vec.capacity(); i++)
-	{
-		newArr[i] = vec.data[i];
-	}
-	arr = newArr;
-	arrSize = vec.size();
-	arrCapacity = vec.capacity();
 }
 
 template<typename T>
 inline tVector<T> & tVector<T>::operator=(const tVector & vec)
 {
 	return new tVector(vec);
+}
+
+template<typename T>
+inline T & tVector<T>::operator[](size_t index)
+{
+	if (index >= arrCapacity || index < 0)
+	{
+		return NULL;
+	}
+	else
+	{
+		return arr[index];
+	}
 }
 
 template<typename T>

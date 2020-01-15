@@ -14,8 +14,8 @@ int main()
 	copy.pop_back();
 	copy.pop_back();
 
-	//std::cout << original.size() << std::endl; // 3
-	//std::cout << copy.size() << std::endl;     // 0
+	std::cout << original.size() << std::endl; // 3
+	std::cout << copy.size() << std::endl;     // 0
 	while (addStuff)
 	{
 		std::cin >> input;

@@ -1,7 +1,9 @@
 ﻿  main.cpp
-c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(60): warning C4018: '<': signed/unsigned mismatch
-  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(58): note: while compiling class template member function 'tVector<int>::tVector(const tVector<int> &)'
+c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(62): warning C4018: '<': signed/unsigned mismatch
+  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(60): note: while compiling class template member function 'tVector<int>::tVector(const tVector<int> &)'
   c:\users\s199011\source\repos\bel_vector\bel_vector\main.cpp(12): note: see reference to function template instantiation 'tVector<int>::tVector(const tVector<int> &)' being compiled
   c:\users\s199011\source\repos\bel_vector\bel_vector\main.cpp(7): note: see reference to class template instantiation 'tVector<int>' being compiled
-c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(62): error C3867: 'tVector<int>::data': non-standard syntax; use '&' to create a pointer to member
-c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(62): error C2109: subscript requires array or pointer type
+c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(64): error C2819: type 'tVector<int>' does not have an overloaded member 'operator ->'
+  c:\users\s199011\source\repos\bel_vector\bel_vector\main.cpp(7): note: see declaration of 'tVector<int>'
+  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(64): note: did you intend to use '.' instead?
+c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(64): error C2232: '->tVector<int>::at': left operand has 'class' type, use '.'
