@@ -146,11 +146,13 @@ inline bool tVector<T>::empty() const
 template<typename T>
 inline void tVector<T>::resize(size_t)
 {
+
 }
 
 template<typename T>
 inline void tVector<T>::shrink_to_fit()
 {
+	arrCapacity = arrSize;
 }
 
 template<typename T>

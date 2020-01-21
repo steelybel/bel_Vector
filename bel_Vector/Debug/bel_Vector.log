@@ -1,8 +1,1 @@
-﻿  main.cpp
-c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(96): warning C4018: '<': signed/unsigned mismatch
-  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(93): note: while compiling class template member function 'void tVector<int>::reserve(size_t)'
-  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(109): note: see reference to function template instantiation 'void tVector<int>::reserve(size_t)' being compiled
-  c:\users\s199011\source\repos\bel_vector\bel_vector\tvector.h(60): note: while compiling class template member function 'tVector<int>::tVector(const tVector<int> &)'
-  c:\users\s199011\source\repos\bel_vector\bel_vector\main.cpp(15): note: see reference to function template instantiation 'tVector<int>::tVector(const tVector<int> &)' being compiled
-  c:\users\s199011\source\repos\bel_vector\bel_vector\main.cpp(7): note: see reference to class template instantiation 'tVector<int>' being compiled
-  bel_Vector.vcxproj -> C:\Users\s199011\source\repos\bel_Vector\Debug\bel_Vector.exe
+﻿  bel_Vector.vcxproj -> C:\Users\s199011\source\repos\bel_Vector\Debug\bel_Vector.exe
