@@ -58,6 +58,9 @@ inline tVector<T>::~tVector()
 template<typename T>
 inline tVector<T>::tVector(const tVector & vec)
 {
+	arrSize = vec.size();
+	arrCapacity = vec.capacity();
+	arr = const_cast<tVector&>(vec).data();
 }
 
 template<typename T>
