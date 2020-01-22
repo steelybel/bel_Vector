@@ -74,7 +74,7 @@ inline T & tVector<T>::operator[](size_t index)
 {
 	if (index >= arrCapacity || index < 0)
 	{
-		return NULL;
+		return arr[0];
 	}
 	else
 	{
@@ -144,9 +144,9 @@ inline bool tVector<T>::empty() const
 }
 
 template<typename T>
-inline void tVector<T>::resize(size_t)
+inline void tVector<T>::resize(size_t s)
 {
-
+	reserve(s);
 }
 
 template<typename T>

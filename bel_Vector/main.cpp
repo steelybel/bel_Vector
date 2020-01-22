@@ -1,4 +1,6 @@
 #include "tVector.h"
+#include "tStack.h"
+#include "tQueue.h"
 #include <iostream>
 int main()
 {
@@ -8,27 +10,46 @@ int main()
 	original.push_back(4);
 	original.push_back(5);
 	original.push_back(6);
-	original.push_back(6);
-	original.push_back(6);
-	original.push_back(6);
 
-	tVector<int> copy = original;
-	copy.pop_back(); // removes from the copy array, but not the original
-	copy.pop_back();
-	copy.pop_back();
-
-	tVector<int> copy_ = copy;
-	copy_.push_back(5);
-	copy_.push_back(5);
-	copy_.pop_back();
+	tStack<int> magazine;
+	tQueue<int> queue;
 
 	std::cout << original.size() << std::endl; // 3
-	std::cout << copy.size() << std::endl;     // 0
-	std::cout << copy_.size() << std::endl;
 	while (addStuff)
 	{
+		std::cout << "Load in a number >";
 		std::cin >> input;
-		if (input > 10) addStuff = false;
+		std::cout << std::endl;
+		magazine.push(input);
+		if (magazine.size() > 12)
+		{
+			addStuff = false;
+		}
 	}
+	for (int b = 0; b < 12; b++)
+	{
+		std::cout << "Fired a " << magazine.top() << " from the number gun";
+		magazine.pop();
+		std::cout << std::endl;
+	}
+	addStuff = true;
+	while (addStuff)
+	{
+		std::cout << "Put in a number >";
+		std::cin >> input;
+		std::cout << std::endl;
+		queue.push(input);
+		if (queue.size() > 10)
+		{
+			addStuff = false;
+		}
+	}
+	for (int b = 0; b < 10; b++)
+	{
+		std::cout << queue.front() << " checked out";
+		queue.pop();
+		std::cout << std::endl;
+	}
+	std::cin >> input;
 	return 0;
 }

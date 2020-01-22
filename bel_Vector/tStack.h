@@ -21,7 +21,7 @@ public:
 template<typename T>
 inline tStack<T>::tStack()
 {
-	vec = new tVector<T>();
+
 }
 
 template<typename T>

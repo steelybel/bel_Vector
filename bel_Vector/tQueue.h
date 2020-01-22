@@ -24,34 +24,44 @@ public:
 template<typename T>
 inline tQueue<T>::tQueue()
 {
-	vec = new tVector();
+
 }
 
 template<typename T>
 inline tQueue<T>::tQueue(size_t count, const T & value)
 {
-	vec = new tVector();
+	for (int c = 0; c < count; c++)
+	{
+		vec.push_back(value);
+	}
 }
 
 template<typename T>
 inline void tQueue<T>::push(const T & value)
 {
-	vec.push_back(value);
+	size_t wtf = (vec.size() + 1);
+	vec.resize(wtf);
+	for (int v = vec.size(); v > 0; v--)
+	{
+		vec[v] = vec[v - 1];
+	}
+	vec[0] = value;
 }
 
 template<typename T>
 inline void tQueue<T>::pop()
 {
-	vec[0] = NULL;
-	for (int v = 1; v < size; v++)
-	{
-		vec[v - 1] = vec[v];
-		vec[v] = NULL;
-	}
+	vec.pop_back();
 }
 
 template<typename T>
 inline T & tQueue<T>::front()
 {
-	return vec[0];
+	return vec[vec.size()];
+}
+
+template<typename T>
+inline size_t tQueue<T>::size() const
+{
+	return vec.size();
 }
