@@ -118,6 +118,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="tQueue.h" />
     <ClInclude Include="tStack.h" />
     <ClInclude Include="tVector.h" />
   </ItemGroup>

@@ -26,5 +26,8 @@
     <ClInclude Include="tStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
